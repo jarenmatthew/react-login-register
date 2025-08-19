@@ -1,0 +1,23 @@
+.home-container {
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-body {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-email {
+  color: var(--text-color);
+  font-size: 1.25rem;
+}

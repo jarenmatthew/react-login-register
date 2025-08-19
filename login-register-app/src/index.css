@@ -1,0 +1,75 @@
+:root {
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: inherit;
+  color: #999;
+}
+
+input,
+button {
+  height: 2.5rem;
+  width: auto;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: #506bf5;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+button:hover {
+  opacity: 0.85;
+}
+
+input {
+  padding-left: 10px;
+}
+input:focus {
+  outline: 2px solid #506bf5;
+  outline-offset: 1px;
+}
+::placeholder {
+  color: var(--text-color);
+  font-size: 1rem;
+}
