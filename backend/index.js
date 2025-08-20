@@ -2,14 +2,17 @@ import express, { request, response, Router } from "express";
 import mongoose from "mongoose";
 import { User } from "./schemas/user.js";
 import cors from "cors";
+import dotenv from "dotenv";
 
 const app = express();
-const PORT = 8080;
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/react_project")
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to Database");
   })
