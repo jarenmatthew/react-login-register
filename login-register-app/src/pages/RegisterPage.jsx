@@ -20,11 +20,14 @@ function RegisterPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/api/users", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/users`,
+        {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         alert("✔️ User registered successfully!");
